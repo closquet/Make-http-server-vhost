@@ -23,16 +23,16 @@
     + sudo rm 000-default-conf
 12. Editer la configuration site 1 : sudo nano site1.lan.conf
     ```
-    <VirtualHost *:80>
-        erverName site1.lan
-        DocumentRoot /home/student/site1
-        DirectoryIndex index.html
-        <Directory /home/student/site1>
-            Require all granted
-            Options +Indexes
-            AllowOverride All
-        </Directory>
-    </VirtualHost>
+        <VirtualHost *:80>
+            erverName site1.lan
+            DocumentRoot /home/student/site1
+            DirectoryIndex index.html
+            <Directory /home/student/site1>
+                Require all granted
+                Options +Indexes
+                AllowOverride All
+            </Directory>
+        </VirtualHost>
     ```
 13. Copier configuration site1 pour site2 : sudo cp site1.lan.conf site2.lan.conf
 14. Editer la configuration site 2 : sudo nano site2.lan.conf et remplacer partout site1 par site2 :

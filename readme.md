@@ -5,10 +5,10 @@
 	+ Mac : /etc/hosts
 2. Lancer le serveur depuis la VM et afficher IP : ifconfig qui donne chez moi 10.0.2.15
 3.  Redirection de ports dans configuration/Réseau/avancé/Redirection de ports sur la VM dans virtualbox
- ```
- Ssh	tcp	127.0.0.1	2222	10.0.2.15	22
- Web	tcp	127.0.0.1	2080	10.0.2.15	80
- ```
+```
+Ssh	tcp	127.0.0.1	2222	10.0.2.15	22
+Web	tcp	127.0.0.1	2080	10.0.2.15	80
+```
 4. Se connecter au serveur via terminal externe : ssh -l student -p 2222 127.0.0.1
 5. Mettre librairie à jour : sudo apt-get update
 6. Mettre les paquets à jour : sudo apt-get upgrade
@@ -58,7 +58,7 @@ RewriteEngine on
 RewriteRule ^debug$ /info.php [QSA,L]
 RewriteRule ^about/([a-zA-Z_-]*)/([a-zA-Z_-]*) /test.php?lastname=$1&firstname=$2 [QSA,L]
 ```
-	> (ajoutez le fichier info.php contenant <?php  phpinfo();  ?>  à la racine de chaque site
+> (ajoutez le fichier info.php contenant <?php  phpinfo();  ?>  à la racine de chaque site
 18. Pour finir, rechargez apache : sudo service apache2 reload
 19. tester sur navigateur :
     + site1.lan:2080

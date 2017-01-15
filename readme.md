@@ -58,7 +58,7 @@ RewriteEngine on
 RewriteRule ^debug$ /info.php [QSA,L]
 RewriteRule ^about/([a-zA-Z_-]*)/([a-zA-Z_-]*) /test.php?lastname=$1&firstname=$2 [QSA,L]
 ```
-> (ajoutez le fichier info.php contenant <?php  phpinfo();  ?>  à la racine de chaque site
+    + (ajoutez le fichier info.php contenant <?php  phpinfo();  ?>  à la racine de chaque site
 18. Pour finir, rechargez apache : sudo service apache2 reload
 19. tester sur navigateur :
     + site1.lan:2080

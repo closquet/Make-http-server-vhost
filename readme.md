@@ -23,16 +23,16 @@ Web	tcp	127.0.0.1	2080	10.0.2.15	80
     + sudo rm 000-default-conf
 12. Editer la configuration site 1 : sudo nano site1.lan.conf
 ```
-    <VirtualHost *:80>
-        erverName site1.lan
-        DocumentRoot /home/student/site1
-        DirectoryIndex index.html
-        <Directory /home/student/site1>
-            Require all granted
-            Options +Indexes
-            AllowOverride All
-        </Directory>
-    </VirtualHost>
+<VirtualHost *:80>
+    erverName site1.lan
+    DocumentRoot /home/student/site1
+    DirectoryIndex index.html
+    <Directory /home/student/site1>
+        Require all granted
+        Options +Indexes
+        AllowOverride All
+    </Directory>
+</VirtualHost>
 ```
 13. Copier configuration site1 pour site2 : sudo cp site1.lan.conf site2.lan.conf
 14. Editer la configuration site 2 : sudo nano site2.lan.conf et remplacer partout site1 par site2 :
@@ -59,6 +59,7 @@ RewriteRule ^debug$ /info.php [QSA,L]
 RewriteRule ^about/([a-zA-Z_-]*)/([a-zA-Z_-]*) /test.php?lastname=$1&firstname=$2 [QSA,L]
 ```
 > (ajoutez le fichier info.php contenant <?php  phpinfo();  ?>  à la racine de chaque site
+
 18. Pour finir, rechargez apache : sudo service apache2 reload
 19. tester sur navigateur :
     + site1.lan:2080

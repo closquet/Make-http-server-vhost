@@ -24,7 +24,7 @@ Web	tcp	127.0.0.1	2080	10.0.2.15	80
 + Editer la configuration site 1 : sudo nano site1.lan.conf
 ```
 <VirtualHost *:80>
-    erverName site1.lan
+    ServerName site1.lan
     DocumentRoot /home/student/site1
     DirectoryIndex index.html
     <Directory /home/student/site1>

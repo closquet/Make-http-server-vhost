@@ -13,7 +13,7 @@ Web	tcp	127.0.0.1	2080	10.0.2.15	80
 + Mettre librairie à jour : sudo apt-get update
 + Mettre les paquets à jour : sudo apt-get upgrade
 + Installer apache : sudo apt-get install apache2
-+ Installer php : sudo libapache2-mod-php
++ Installer php : sudo apt-get install libapache2-mod-php
 + Active le mode rewrite : sudo a2enmod rewrite
 + Créer la configuration site1 :
     + cd /etc/apache2/sites-available

@@ -66,3 +66,6 @@ RewriteRule ^about/([a-zA-Z_-]*)/([a-zA-Z_-]*) /test.php?lastname=$1&firstname=$
     + site1.lan:2080/debug
     + site2.lan:2080/about/tonNom/tonPrénom
 2+ En cas de bug, vérifiez les log dans /var/log/apache2/
+
+# https !
+https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04
